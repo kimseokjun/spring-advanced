@@ -18,4 +18,3 @@ FilterConfig 가 JwtUtil 빈을 생성자 주입받는 과정에서 실패함.
 JwtUtil 내부를 확인해보니, @Value("${jwt.secret.key}") 로 설정값을 주입받고 있지만,
 
 application.yml / application.properties 에 jwt.secret.key 설정이 없어서, secretKey 가 null → 초기화 과정에서 예외 발생 → 애플리케이션 실행 실패.
-
